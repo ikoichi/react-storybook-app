@@ -1,25 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from "styled-components"
+import theme from "./components/theme"
+import EntryPage from "./components/pages/EntryPage/EntryPage"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          React is so cool 😎
-        </a>
-      </header>
-    </div>
-  )
-}
+const App = () => (
+  <ThemeProvider theme={theme}>
+    <EntryPage />
+  </ThemeProvider>
+)
 
-export default App;
+export default App
