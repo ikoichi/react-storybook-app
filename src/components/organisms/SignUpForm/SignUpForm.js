@@ -23,19 +23,21 @@ const ResetButton = styled(Button)`
   margin-right: 16px;
 `
 
-const SignInForm = ({ ...props }) => (
+const SignUpForm = ({ ...props }) => (
   <Wrapper {...props}>
-    <Title>Sign in</Title>
-    <StyledFormInput label="Email" />
+    <Title>Sign up</Title>
+    <StyledFormInput label="Full name" placeholder="John Doe" />
+    <StyledFormInput label="Email" placeholder="john.doe@example.com" />
     <StyledFormInput
       label="Password"
       type="password"
+      placeholder="Choose a strong password..."
     />
     <ActionsRow>
       <ResetButton>Reset</ResetButton>
-      <Button isPrimary>Login</Button>
+      <Button isPrimary>Create account</Button>
     </ActionsRow>
   </Wrapper>
 )
 
-export default SignInForm
+export default SignUpForm

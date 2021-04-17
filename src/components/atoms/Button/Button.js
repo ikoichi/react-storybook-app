@@ -31,9 +31,9 @@ const Wrapper = styled.button`
   }
 `
 
-const Button = ({ isPrimary, children, onClick }) => {
+const Button = ({ isPrimary, children, onClick, ...props }) => {
   return (
-    <Wrapper isPrimary={isPrimary} onClick={onClick}>
+    <Wrapper isPrimary={isPrimary} onClick={onClick} {...props}>
       {children}
     </Wrapper>
   )
